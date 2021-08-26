@@ -13,6 +13,7 @@ module.exports = {
       const astroturfLoader = {
         test: /StyledComponents\.tsx$/,
         loader: 'astroturf/loader',
+        options: { extension: '.module.scss' },
       };
 
       addBeforeLoader(
