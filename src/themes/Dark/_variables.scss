@@ -1,0 +1,52 @@
+@use 'sass:color';
+
+// Basic Color Variables
+$theme-color-primary-light: #ffc4ff;
+$theme-color-primary: #ce93d8;
+$theme-color-primary-dark: #9c64a6;
+$theme-color-primary-text: #000;
+
+$theme-color-secondary-light: #ffddc1;
+$theme-color-secondary: #ffab91;
+$theme-color-secondary-dark: #c97b63;
+$theme-color-secondary-text: #000;
+
+$theme-color-error: #cf6679;
+$theme-color-error-text: #000;
+
+$theme-color-background-text: #fff;
+$theme-color-surface-text: #fff;
+
+$theme-dark-overlay: #fff;
+$theme-depth-0: #121212;
+
+// Other Theme Variable Calculations
+@function calc_depth($opacity) {
+  @return mix($theme-dark-overlay, $theme-depth-0, $opacity);
+}
+
+@function calc_background_emphasis($opacity) {
+  @return color.change($theme-color-background-text, $alpha: $opacity);
+}
+
+@function calc_surface_emphasis($opacity) {
+  @return color.change($theme-color-surface-text, $alpha: $opacity);
+}
+
+$theme-color-background-text-high: calc_background_emphasis(0.87);
+$theme-color-background-text-medium: calc_background_emphasis(0.6);
+$theme-color-background-text-disabled: calc_background_emphasis(0.38);
+
+$theme-color-surface-text-high: calc_surface_emphasis(0.87);
+$theme-color-surface-text-medium: calc_surface_emphasis(0.6);
+$theme-color-surface-text-disabled: calc_surface_emphasis(0.38);
+
+$theme-depth-1: calc_depth(5%);
+$theme-depth-2: calc_depth(7%);
+$theme-depth-3: calc_depth(8%);
+$theme-depth-4: calc_depth(9%);
+$theme-depth-6: calc_depth(11%);
+$theme-depth-8: calc_depth(12%);
+$theme-depth-12: calc_depth(14%);
+$theme-depth-16: calc_depth(15%);
+$theme-depth-21: calc_depth(16%);
