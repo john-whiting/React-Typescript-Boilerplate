@@ -1,11 +1,6 @@
 /* eslint-disable */
 
-const {
-  getLoader,
-  loaderByName,
-  addBeforeLoader,
-  addAfterLoader,
-} = require('@craco/craco');
+const { loaderByName, addBeforeLoader } = require('@craco/craco');
 
 module.exports = {
   webpack: {
