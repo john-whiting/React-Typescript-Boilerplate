@@ -1,11 +1,6 @@
 /* eslint-disable */
 
-const {
-  getLoader,
-  loaderByName,
-  addBeforeLoader,
-  addAfterLoader,
-} = require('@craco/craco');
+const { loaderByName, addBeforeLoader } = require('@craco/craco');
 
 module.exports = {
   webpack: {
@@ -13,6 +8,7 @@ module.exports = {
       const astroturfLoader = {
         test: /StyledComponents\.tsx$/,
         loader: 'astroturf/loader',
+        options: { extension: '.module.scss' },
       };
 
       addBeforeLoader(
