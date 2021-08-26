@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import AppWrapper from './components/AppWrapper';
-import RoutingPage from './pages';
+import AppWrapper from '../AppWrapper';
+import RoutingPage from '../../pages';
 
 const App: FC = () => (
   <AppWrapper>
