@@ -1,5 +1,3 @@
-# John Whiting's Electronic Portfolio Website
+# React Typescript Boilerplate
 
-[Link to Portfolio Website](https://www.jwhiting.dev)
-
-This website is based on a [react boilerplate](https://github.com/john-whiting/React-Typescript-Boilerplate) that I created based on Create React App.
+This project is a work in progress culmination of react, typescript, astroturf-react, craco, and a custom theme that is being built up around the Material.io specifications for a dark theme.
